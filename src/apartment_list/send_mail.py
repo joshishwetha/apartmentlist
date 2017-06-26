@@ -2,10 +2,10 @@ import smtplib
 
 
 def send_email():
-    gmail_user = "heathensoul.inc@gmail.com"
-    gmail_pwd = "*Godisgreat1"
-    FROM = "heathensoul.inc@gmail.com"
-    TO = "heathensoul.inc@gmail.com" 
+    gmail_user = ""
+    gmail_pwd = ""
+    FROM = ""
+    TO = "" 
     SUBJECT = "hello"
     TEXT = "hey you!"
 
