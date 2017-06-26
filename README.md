@@ -1,4 +1,4 @@
-The repo is a possible solution to the problem detailed here
+#### This project address the problem detailed here
 https://gist.github.com/sarahwiemero/0aa5ff2d24196c65880936bbe80f6c52
 
 ### Components
