@@ -5,14 +5,24 @@ import datetime
 import logging
 from flask import Flask, render_template, request, Response, jsonify, session
 from apartment_list.database import Database 
-from apartment_list.generate_groups import driver
+from apartment_list.generate_groups import GroupGenerator
 
 app = Flask(__name__)
 
 
 @app.route('/generate_list', methods=['GET'])
+
 def get_servers():
-    result = driver()
+    db = Database()
+    names = db.get_employees()
+    groups = set(db.get_groups())
+
+    generator = GroupGenerator(names,groups=groups)
+    groups = generator.generate_groups(group_len=4)
+    db.update_groups(groups)
+    db.client.close()
+
+    result = ['Done!']
     return Response(json.dumps(result), status=200,
         mimetype='application/json')
 
