@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+  {% include "_base.html" %}
+   <!-- <style type="text/css">
+    .ng-invalid  { border: 1px solid red; }
+  </style> -->
+  <body ng-controller="APPController as appctrl">
+    {% include "_header.html" %}
+    <div class="container" align="center">
+      <div class="col-md-12">
+        <button class="btn btn-primary btn-lg" ng-click="generate()">Generate Groups</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="well well-sm" style="width: 40%;">
+          <form>
+            <label>Enter Email: </label>
+            <input type="email" name="email" ng-model="email">
+            <button type="button" class="btn btn-success" ng-click="find_group()">Find my Group</button>
+          </form>
+        </div>
+        <p ng-repeat="email in group">{$ email $}</p>
+      </div>
+    </div>
+  </body>
+</html>
