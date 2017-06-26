@@ -5,13 +5,14 @@ import datetime
 import logging
 from flask import Flask, render_template, request, Response, jsonify, session
 from apartment_list.database import Database 
+from apartment_list.generate_groups import driver
 
 app = Flask(__name__)
 
 
-@app.route('/servers', methods=['GET'])
+@app.route('/generate_list', methods=['GET'])
 def get_servers():
-    result = ['Hello1', 'Hello2']
+    result = driver()
     return Response(json.dumps(result), status=200,
         mimetype='application/json')
 

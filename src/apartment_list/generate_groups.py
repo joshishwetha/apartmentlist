@@ -1,7 +1,6 @@
-
 import random 
 import hashlib 
-from database import Database 
+ 
 
 class GroupGenerator(object):
 	def __init__(self,names,groups={}):
@@ -87,7 +86,10 @@ def driver():
 	groups = generator.generate_groups(group_len=4)
 	db.update_groups(groups)
 
+	db.client.close()
+
 
 if __name__=='__main__':
+	from database import Database
 	driver()
 	

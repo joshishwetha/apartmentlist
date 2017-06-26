@@ -11,11 +11,14 @@
         console.log('My app');
         $scope.email = '';
         $scope.group = [];
+        $scope.generate_status = 'Generate Groups';
+        $scope.isActive = false;
 
         $scope.generate = function(){
-        	console.log('generating...');
-        	$http.get('/servers').then(function(data){
+        	$http.get('/generate_list').then(function(data){
         		console.log(data);
+                $scope.generate_status = 'Generated!';
+                $scope.isActive = true;
         	});
         }
 
@@ -23,7 +26,7 @@
         	console.log('email: ' + $scope.email);
         	$http.get('/find_group/' + $scope.email).then(function(response){
         		console.log(response);
-        		$scope.group = response.data 
+        		$scope.group = response.data ;
         	});
         }
 
