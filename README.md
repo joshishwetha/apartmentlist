@@ -19,3 +19,4 @@ https://gist.github.com/sarahwiemero/0aa5ff2d24196c65880936bbe80f6c52
 - Alternatively, send emails once groups are generated
 
 
+![alt text](https://github.com/joshishwetha/apartmentlist/blob/master/apartment_list_ui.png)
