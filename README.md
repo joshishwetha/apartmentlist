@@ -1,6 +1,3 @@
-#### This project address the problem detailed here
-https://gist.github.com/sarahwiemero/0aa5ff2d24196c65880936bbe80f6c52
-
 ### Components
 - MongoDB (database to store employee information and groups)
 - Flask (web application)
